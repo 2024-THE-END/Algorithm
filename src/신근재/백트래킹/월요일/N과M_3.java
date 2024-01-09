@@ -1,7 +1,9 @@
+package 신근재.백트래킹.월요일;
+
 import java.util.*;
 import java.io.*;
 
-public class Main {
+public class N과M_3 {
     static int n;
     static int m;
     static int[] visited;

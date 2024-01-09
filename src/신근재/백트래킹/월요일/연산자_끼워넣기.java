@@ -1,7 +1,9 @@
+package 신근재.백트래킹.월요일;
+
 import java.util.*;
 import java.io.*;
 
-public class Main {
+public class 연산자_끼워넣기 {
     static int[] ary;
     static int n;
     static int max = -1;

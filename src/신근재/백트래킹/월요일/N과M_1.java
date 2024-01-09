@@ -1,7 +1,9 @@
+package 신근재.백트래킹.월요일;
+
 import java.util.*;
 import java.io.*;
 
-public class Main {
+public class N과M_1 {
     static int n;
     static int m;
     static int[] visited;
@@ -13,13 +15,9 @@ public class Main {
         m =  sc.nextInt();
         visited = new int[n+1];
         ary = new int[n+1];
-        ary[0] = -1;
 
         //DFS 깊이우선탐색을 통해 재귀적으로 해결
         dfs(1);
-
-        //1.다 구하고 나서 오름차순인 것만 출력
-        //2.구할 때 오름차순인 것만 ary에 담기
     }
 
     private static void dfs(int curDepth) {
@@ -36,12 +34,8 @@ public class Main {
         for(int i= 1; i <= n; i++){
             if(visited[i] == 0){
                 visited[i] = 1;
-                //System.out.println("123");
-                if(ary[curDepth-1] < i){
-                    ary[curDepth] = i;
-                    dfs(curDepth+1);
-                }
-
+                ary[curDepth] = i;
+                dfs(curDepth+1);
                 visited[i] = 0;
             }
         }
