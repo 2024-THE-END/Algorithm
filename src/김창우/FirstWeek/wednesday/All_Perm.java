@@ -1,11 +1,11 @@
-package 김창우;
+package 김창우.FirstWeek.wednesday;
 
 import java.util.Scanner;
-public class NandM_1 {
+
+public class All_Perm {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int N=sc.nextInt();
-        int M=sc.nextInt();
         int[] arr=new int[N];
         for(int i=0;i<N;i++){
             arr[i]=i+1;
@@ -13,19 +13,19 @@ public class NandM_1 {
         int[] output=new int[N];
         boolean[] visited=new boolean[N];
 
-        prem(arr,output,visited,0,N,M);
+        prem(arr,output,visited,0,N);
     }
 
-    private static void prem(int[] arr, int[] output, boolean[] visited, int depth, int n, int r) {
-        if(depth==r){
-            print(output,r);
+    private static void prem(int[] arr, int[] output, boolean[] visited, int depth, int n) {
+        if(depth==n){
+            print(output,n);
             return;
         }
         for (int i=0;i<n;i++){
             if (visited[i]!=true){
                 visited[i]=true;
                 output[depth]=arr[i];
-                prem(arr, output, visited, depth+1, n, r);
+                prem(arr, output, visited, depth+1, n);
                 visited[i]=false;
             }
         }
@@ -38,4 +38,3 @@ public class NandM_1 {
         System.out.println();
     }
 }
-
