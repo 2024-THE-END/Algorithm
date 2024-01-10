@@ -1,4 +1,7 @@
-package 신근재.백트래킹.화요일;
+package 신근재.백트래킹.화;
+
+import java.util.*;
+import java.io.*;
 
 public class 스타트와링크 {
     //시작 15:20
