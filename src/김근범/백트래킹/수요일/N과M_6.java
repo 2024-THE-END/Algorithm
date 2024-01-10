@@ -3,30 +3,33 @@ package 김근범.백트래킹.수요일;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
 
-public class 모든순열 {
-
-    static int N;
+public class N과M_6 {
+    static int N, M;
     static int[] arr;
     static int[] result;
-    static boolean[] check;
     static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        N = Integer.parseInt(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        N = Integer.parseInt(st.nextToken());
+        M = Integer.parseInt(st.nextToken());
         arr = new int[N];
-        result = new int[N];
-        check = new boolean[N];
-        for(int i=1;i<=N;i++){
-            arr[i-1] = i;
+        result = new int[M];
+        st = new StringTokenizer(br.readLine());
+        for(int i=0;i<N;i++){
+            arr[i] = Integer.parseInt(st.nextToken());
         }
+        Arrays.sort(arr);
         fetchSequences(0);
         System.out.print(sb);
     }
 
     private static void fetchSequences(int index) {
-        if(index == N) {
+        if(index == M) {
             for(int i : result) {
                 sb.append(i).append(' ');
             }
@@ -35,11 +38,9 @@ public class 모든순열 {
         }
 
         for(int i=0;i<N;i++){
-            if(!check[i]) {
-                check[i] = true;
+            if(index == 0 || result[index-1] < arr[i]) {
                 result[index] = arr[i];
                 fetchSequences(index+1);
-                check[i] = false;
             }
         }
     }
