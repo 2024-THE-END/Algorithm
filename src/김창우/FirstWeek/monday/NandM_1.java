@@ -1,4 +1,4 @@
-package 김창우;
+package 김창우.FirstWeek.monday;
 
 import java.util.Scanner;
 public class NandM_1 {
