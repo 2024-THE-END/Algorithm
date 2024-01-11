@@ -1,7 +1,6 @@
-package 신근재.백트래킹.화;
+package 신근재.백트래킹.화요일;
 
 import java.util.*;
-import java.io.*;
 
 public class 부분수열의합 {
     //시작 14:03
