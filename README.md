@@ -21,39 +21,46 @@
 ## 🚩 알고리즘 공부 순서
 
 
-<details>
+
 </div>
-<summary><h3>1. 백트래킹<h3></summary>
-<h4>월</h4>
-- N과M 1<br/>
-- N과M 2<br/>
-- N과M 4<br/>
-- N과M 3<br/>
-- 연사자 끼워넣기<br/>
-<h4>화</h4>
-- 스타트와 링크<br/>
-- 부분수열의 합<br/>
-- 로또<br/>
-- N과M 5<br/>
-- N과M 8<br/>
-<h4>수</h4>
-- 차이를 최대로<br/>
-- 모든 순열<br/>
-- N과M 6<br/>
-- N과M 9<br/>
-- N과M 7<br/>
-<h4>목</h4>
-- 외판원 순회2<br/>
-- N과M 12<br/>
-- 부등호<br/>
-- N과M 10<br/>
-- N과M 11<br/>
-<h4>금</h4>
-- 도영이가 만든 맛있는 음식<br/>
-- 카드 놓기<br/>
-- 연산자 끼워넣기 2<br/>
-- 어네지 모으기<br/>
-- 컴백홈<br/>
+<details>
+  <summary><h3>1. 백트래킹<h3></summary>
+  <details>
+  <summary><h5>1주차</h5></summary>
+    <h6>월</h6>
+  - N과M 1<br/>
+  - N과M 2<br/>
+  - N과M 4<br/>
+  - N과M 3<br/>
+  - 연사자 끼워넣기<br/>
+  <h6>화</h6>
+  - 스타트와 링크<br/>
+  - 부분수열의 합<br/>
+  - 로또<br/>
+  - N과M 5<br/>
+  - N과M 8<br/>
+  <h6>수</h6>
+  - 차이를 최대로<br/>
+  - 모든 순열<br/>
+  - N과M 6<br/>
+  - N과M 9<br/>
+  - N과M 7<br/>
+  <h6>목</h6>
+  - 외판원 순회2<br/>
+  - N과M 12<br/>
+  - 부등호<br/>
+  - N과M 10<br/>
+  - N과M 11<br/>
+  <h6>금</h6>
+  - 도영이가 만든 맛있는 음식<br/>
+  - 카드 놓기<br/>
+  - 연산자 끼워넣기 2<br/>
+  - 어네지 모으기<br/>
+  - 컴백홈<br/>
+  </details>
+  <details>
+  </details>
+</details>
 </details>
 <details>
 <summary><h3>2. DP<h3></summary>
