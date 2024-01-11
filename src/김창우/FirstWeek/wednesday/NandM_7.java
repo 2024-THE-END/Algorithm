@@ -1,8 +1,9 @@
-package 김창우;
+package 김창우.FirstWeek.wednesday;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class NandM_3 {
+public class NandM_7 {
     public static StringBuilder sb = new StringBuilder();
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -10,10 +11,11 @@ public class NandM_3 {
         int M=sc.nextInt();
         int[] arr=new int[N];
         for(int i=0;i<N;i++){
-            arr[i]=i+1;
+            arr[i]=sc.nextInt();
         }
         int[] output=new int[M];
 
+        Arrays.sort(arr);
 
         prem(arr,output,0,M);
 
