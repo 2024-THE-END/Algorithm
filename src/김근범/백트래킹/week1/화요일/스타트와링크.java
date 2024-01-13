@@ -1,4 +1,4 @@
-package 김근범.백트래킹.화요일;
+package 김근범.백트래킹.week1.화요일;
 
 import java.io.BufferedReader;
 import java.io.IOException;

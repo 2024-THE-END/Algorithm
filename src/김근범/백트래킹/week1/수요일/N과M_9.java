@@ -1,15 +1,16 @@
-package 김근범.백트래킹.수요일;
+package 김근범.백트래킹.week1.수요일;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.StringTokenizer;
+import java.util.*;
 
-public class N과M_6 {
+public class N과M_9 {
     static int N, M;
+    static LinkedHashSet<Integer> set = new LinkedHashSet<>();
     static int[] arr;
     static int[] result;
+    static HashMap<Integer, Integer> map = new HashMap<>();
     static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) throws IOException {
@@ -17,13 +18,17 @@ public class N과M_6 {
         StringTokenizer st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
-        arr = new int[N];
         result = new int[M];
+        arr = new int[N];
         st = new StringTokenizer(br.readLine());
         for(int i=0;i<N;i++){
             arr[i] = Integer.parseInt(st.nextToken());
         }
         Arrays.sort(arr);
+        for(int i=0;i<N;i++){
+            set.add(arr[i]);
+            map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
+        }
         fetchSequences(0);
         System.out.print(sb);
     }
@@ -37,10 +42,12 @@ public class N과M_6 {
             return;
         }
 
-        for(int i=0;i<N;i++){
-            if(index == 0 || result[index-1] < arr[i]) {
-                result[index] = arr[i];
-                fetchSequences(index+1);
+        for (int num : set) {
+            if (map.getOrDefault(num, 0) > 0) {
+                map.put(num, map.get(num) - 1);
+                result[index] = num;
+                fetchSequences(index + 1);
+                map.put(num, map.get(num) + 1);
             }
         }
     }

@@ -1,46 +1,44 @@
-package 김근범.백트래킹.수요일;
+package 김근범.백트래킹.week1.수요일;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
 
-public class 차이를최대로 {
+public class 모든_순열 {
 
     static int N;
     static int[] arr;
     static int[] result;
     static boolean[] check;
-    static int max = Integer.MIN_VALUE;
+    static StringBuilder sb = new StringBuilder();
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(br.readLine());
         arr = new int[N];
         result = new int[N];
         check = new boolean[N];
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        for(int i=0;i<N;i++){
-            arr[i] = Integer.parseInt(st.nextToken());
+        for(int i=1;i<=N;i++){
+            arr[i-1] = i;
         }
-        calculateMaxDiff(0);
-        System.out.println(max);
+        fetchSequences(0);
+        System.out.print(sb);
     }
 
-    private static void calculateMaxDiff(int index) {
+    private static void fetchSequences(int index) {
         if(index == N) {
-            int sum = 0;
-            for(int i=0; i<N-1;i++) {
-                sum += Math.abs(result[i] - result[i+1]);
+            for(int i : result) {
+                sb.append(i).append(' ');
             }
-            if(max < sum) max = sum;
+            sb.append('\n');
             return;
         }
 
-        for(int i = 0;i<N;i++){
+        for(int i=0;i<N;i++){
             if(!check[i]) {
                 check[i] = true;
                 result[index] = arr[i];
-                calculateMaxDiff(index+1);
+                fetchSequences(index+1);
                 check[i] = false;
             }
         }
