@@ -1,15 +1,16 @@
-package 신근재.백트래킹.월요일;
+package 신근재.백트래킹.금요일;
 
 import java.util.*;
 import java.io.*;
 
-public class 연산자_끼워넣기 {
+public class 연산자끼워넣기2 {
     static int[] ary;
     static int n;
     static int max = -1;
-    static int min = 99999;
+    static int min = Integer.MAX_VALUE;
     static int[] saveSign;
     static int[] signs;
+
     public static void main(String args[]) throws Exception {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
