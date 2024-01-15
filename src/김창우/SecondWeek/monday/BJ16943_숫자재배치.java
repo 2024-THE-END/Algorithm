@@ -35,7 +35,7 @@ public class BJ16943_숫자재배치 {
         if(depth==r){
             if(output[0]!=0) {
                 int current=change(output);
-                if(current<M){
+                if(current<=M){
                     answer.add(change(output));
                 }
             }
