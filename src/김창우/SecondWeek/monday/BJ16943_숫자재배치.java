@@ -1,8 +1,6 @@
 package 김창우.SecondWeek.monday;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class BJ16943_숫자재배치 {
     static int N,M;
@@ -25,11 +23,9 @@ public class BJ16943_숫자재배치 {
             num[i]=temp.charAt(i)-'0';
         }
         prem(output,0,len,len);
-        if(answer.isEmpty()){
-            System.out.println(-1);
-        }else {
-            System.out.println(answer.get(answer.size()-1));
-        }
+        Collections.sort(answer);
+        if(answer.isEmpty()) System.out.println(-1);
+        else System.out.println(answer.get(answer.size()-1));
     }
     private static void prem(int[] output, int depth,int n,int r) {
         if(depth==r){
