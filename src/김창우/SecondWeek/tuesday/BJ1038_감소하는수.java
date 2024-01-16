@@ -26,18 +26,18 @@ public class BJ1038_감소하는수 {
         else if (N > 1022) System.out.println(-1);
         else{
             for (int i=0;i<10;i++){
-                dps(i,1);
+                dps(i);
             }
             Collections.sort(list);//순서대로 정렬해줘야 순서대로 나옴
             System.out.println(list.get(N));
         }
     }
-    private static void dps(long num,int idx){
-        if(idx>10)return;
+    private static void dps(long num){
         list.add(num);
+        if(num%10==0)return;
+
         for (int i=0;i<num%10;i++){
-            dps((num*10)+i,idx+i);
+            dps(num*10+i);
         }
     }
 }
-
